@@ -1,0 +1,874 @@
+/* ###########################  General Styles */
+
+/* 002e7a blue 
+002378  dark blue
+*/
+:root {
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --font-family: Arial, sans-serif;
+  --line-height: 1.6;
+  --base-font-size: 16px;
+  --heading-margin: 1rem;
+}
+
+/* :root {
+  --primary-color: #a03f07;
+  --primary-hover-color: #002378;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  --font-family: Arial, sans-serif;
+  --line-height: 1.6;
+  --base-font-size: 16px;
+  --heading-margin: 1rem;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-size: var(--base-font-size);
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--heading-margin);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-hover-color);
+}
+
+/* ###########################  Media Queries */
+@media (min-width: 768px) {
+  :root {
+    --base-font-size: 18px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --base-font-size: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+/* ###########################  Header */
+header {
+  /* background: #007bff; */
+  /* opacity: 1;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; */
+}
+
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header stays above other content */
+  transition: opacity 0.5s ease; /* Smooth fade transition */
+  
+}
+
+
+/* Add a pseudo-element for the parallax background */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/headerBGBlue.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Creates the parallax effect */
+  z-index: -1; /* Place it behind the content */
+  opacity: 1/* Adjust opacity to blend with the background color */
+}
+/* 
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+} */
+
+
+header .header-content {
+  padding-top: 10px;
+  position: relative; /* Ensure content stays above the parallax background */
+  z-index: 1; /* Bring content to the front */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 auto;
+}
+
+header .logo-and-name {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and company name */
+}
+
+header .logo {
+  height: 100px; /* Adjust logo height as needed */
+  background-color: #fff; /* White background for the logo */
+  padding: 5px; /* Padding around the logo */
+  border-radius: 10px; /* Rounded corners for the logo */
+}
+
+header .logo img {
+  
+  height: 100%;
+  width: auto;
+}
+
+
+header h1 {
+  font-size: 2rem;
+  margin: 0; /* Remove default margin */
+  line-height: 1.2; /* Adjust line height for better spacing */
+  text-align: justify; /* Align text to the left */
+  color: #fff;
+  text-shadow: #F57C00;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+  padding-top: 50px;
+  align-items: center;
+  display: flex;
+  gap: 30px; /* Space between nav items */
+}
+
+
+nav ul li {
+  position: relative;
+  padding: 10px 15px; /* Add padding for better spacing */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px; /* Ensure the anchor has enough space */
+  display: block; /* Make sure the link covers the entire area */
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+  border-radius: 10px;
+}
+
+nav ul li a:hover {
+  color: #002e7a; /* Change text color on hover */
+  background-color: #fff; /* White background on hover */
+  display: block;
+  padding: 10px 15px; /* Maintain padding */
+}
+
+nav ul li a:hover::before {
+  opacity: 1; /* Show the hover background */
+}
+
+
+
+/* ###########################  Media Queries */
+@media (max-width: 768px) {
+  header .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header::before {
+    background-attachment: scroll; /* Disable parallax on mobile */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically on mobile */
+    gap: 10px;
+  }
+}
+
+
+/* ###########################  Media Queries */
+@media (max-width: 768px) {
+  header .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  header p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically on mobile */
+    gap: 10px;
+  }
+}
+
+
+.content-divide {
+  padding-top: 80px; /* Match the header height */
+}
+
+
+
+/* Hero Section */
+.banner {
+  background: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.banner h2 {
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  max-width: 55%;
+  margin: 0 auto
+  
+}
+
+.banner button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  margin: 30px 0;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.banner button:hover {
+  background-color: #0056b3;
+  font-weight: bold;
+}
+
+
+/* ##########################   Services Section */
+
+.services {
+  padding: 40px;
+  /* text-align: center; */
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  grid-column: span 3; /* Makes the heading span across all 3 columns */
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.services h4 {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  grid-column: 1 / -1; /* Makes the paragraph span across all columns */
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.service-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-item li {
+  margin-bottom: 8px;
+  color: #555;
+  border-color: #007bff;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 
+    -1px -1px 1px rgba(255, 255, 255, 0.8), /* Top-left highlight */
+    1px 1px 1px rgba(0, 0, 0, 0.3); /* Bottom-right shadow */
+}
+.service-item li:hover {
+  color: #007BFF;
+  background-color: #e0e0e0; /* Light gray background on hover */
+  /* text-transform: uppercase; */
+  font-weight: bold;
+}
+
+
+/* 3-column grid layout */
+#services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 15px; /* Adjusted gap to fit within 605px */
+  width: 100%; /* Ensure the grid takes up the full width of its container */
+}
+
+@media (max-width: 768px) {
+  #services {
+    grid-template-columns: 1fr; /* Stacks into 1 column on smaller screens */
+  }
+}
+
+
+
+/* ################  Services Overview */
+.services-overview {
+  padding: 60px 20px; /* Increased padding for better spacing */
+  text-align: center;
+  background: #f9f9f9; /* Light background to distinguish the section */
+  margin: 0 auto;
+}
+
+.services-overview h2 {
+  font-size: 2.5rem; /* Larger font size for emphasis */
+  margin-bottom: 20px;
+  color: #007bff; /* Darker color for better contrast */
+}
+
+.services-overview p {
+  font-size: 1.1rem;
+  max-width: 1000px; /* Adjusted for better readability */
+  margin: 0 auto;
+  color: #555; /* Slightly lighter color for paragraph text */
+  line-height: 1.8; /* Improved line height for readability */
+}
+
+/* Service Categories */
+.service-category {
+  padding: 40px 20px;
+  background: #fff;
+  margin: 20px auto; /* Center the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 60%;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.service-category:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.service-category h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: #007bff; /* Darker color for headings */
+}
+
+.service-category ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left; /* Align list items to the left */
+}
+
+.service-category ul li {
+  margin-bottom: 10px;
+  color: #555; /* Slightly lighter color for list items */
+  font-size: 1rem;
+  line-height: 1.6; /* Improved line height for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-overview {
+    padding: 40px 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .services-overview h2 {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+  }
+
+  .services-overview p {
+    font-size: 1rem;
+  }
+
+  .service-category {
+    padding: 30px 15px;
+    max-width: 90%; /* More width on smaller screens */
+  }
+
+  .service-category h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-category ul li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-overview {
+    padding: 30px 10px;
+  }
+
+  .services-overview h2 {
+    font-size: 1.75rem;
+  }
+
+  .services-overview p {
+    font-size: 0.95rem;
+  }
+
+  .service-category {
+    padding: 20px 10px;
+    max-width: 100%; /* Full width on very small screens */
+  }
+
+  .service-category h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-category ul li {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* ###########################  About Section */
+.about {
+  background: #f4f4f4;
+  padding: 40px 20px; /* Reduced padding for smaller screens */
+  text-align: center;
+}
+
+
+.about p {
+  font-size: 1rem; /* Base font size for paragraphs */
+  color: #555;
+  line-height: 1.6; /* Slightly reduced line height for smaller screens */
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 15px; /* Add padding to prevent text from touching edges on small screens */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .about {
+    padding: 60px 20px; /* Increase padding for tablets and larger screens */
+  }
+
+  .about h2 {
+    font-size: 2.5rem; /* Larger font size for headings on larger screens */
+  }
+
+  .about p {
+    font-size: 1.1rem; /* Slightly larger font size for readability on larger screens */
+    line-height: 1.8; /* Increase line height for better readability */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    padding: 80px 20px; /* Even more padding for desktops */
+  }
+
+  .about h2 {
+    font-size: 2rem; /* Larger font size for headings on desktops */
+  }
+
+  .about p {
+    font-size: 1.2rem; /* Slightly larger font size for desktops */
+  }
+}
+
+
+
+
+/* ###########################  Testimonials Section */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 80px 20px; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem; /* Larger font size for emphasis */
+  margin-bottom: 20px; /* Added spacing below the heading */
+}
+
+.testimonial-container {
+  position: relative;
+  max-width: 60%; /* Slightly wider container for better readability */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for the container */
+}
+
+.testimonial-items-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial-item {
+  min-width: 100%;
+  padding: 30px; /* Increased padding for better spacing */
+  background: #fff; /* White background for the testimonial card */
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.testimonial-item p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px; /* Increased spacing below the quote */
+  font-size: 1.1rem; /* Slightly larger font size for readability */
+}
+
+.testimonial-item h3 {
+  font-size: 1.3rem; /* Larger font size for the name */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px; /* Spacing below the name */
+}
+
+.testimonial-item p:last-child {
+  font-weight: normal;
+  color: #777;
+  font-size: 1rem; /* Smaller font size for the role */
+}
+
+/* Carousel Navigation Buttons */
+/* ###########################  Carousel Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 123, 255, 0.9); /* More opaque background */
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 10; /* Ensure buttons are above the testimonials */
+}
+
+.carousel-btn:hover {
+  background-color: #007bff; /* Solid blue on hover */
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 20px; /* Position previous button further from the edge */
+}
+
+.carousel-btn.next {
+  right: 20px; /* Position next button further from the edge */
+}
+
+
+/* ###########################  Media Queries */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 60px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .testimonials h2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .testimonial-container {
+    max-width: 90%; /* Wider container for smaller screens */
+  }
+
+  .testimonial-item {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem; /* Smaller buttons for mobile */
+    padding: 8px;
+  }
+}
+
+
+/* ###########################  Contact Section */
+.contact {
+  padding: 60px 20px; /* Increased padding for better spacing */
+  text-align: center;
+  margin: 0 auto;
+  background: #f4f4f4;
+}
+
+.contact p {
+  padding: 20px; /* Increased padding for better spacing */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  margin-bottom: 10px; /* Increased spacing below the heading */
+}
+
+.contact form {
+  max-width: 60%;
+  margin: 0 auto;
+  background: #fff; /* White background for the form */
+  padding: 30px; /* Padding inside the form */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 12px; /* Slightly larger padding for better input fields */
+  margin-bottom: 20px; /* Increased spacing between fields */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Rounded corners for input fields */
+  font-size: 1rem; /* Consistent font size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Subtle glow effect */
+  outline: none; /* Remove default outline */
+}
+
+.contact form textarea {
+  resize: vertical; /* Allow vertical resizing of textarea */
+  min-height: 150px; /* Minimum height for textarea */
+}
+
+.contact form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 30px; /* Larger padding for a more clickable button */
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.contact form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.contact form button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* ###########################  Media Queries */
+@media (max-width: 768px) {
+  .contact {
+    padding: 40px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .contact h2 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .contact form {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+}
+
+
+/* ##################  footer design  */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px; /* Increased padding for better spacing */
+  margin-top: 40px;
+  font-family: Arial, sans-serif; /* Added font-family for consistency */
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px; /* Adjusted font size for better readability */
+  line-height: 1.6; /* Improved line height */
+}
+
+footer a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+  color: #ffcc00; /* Highlight color on hover */
+}
+
+/* Social links section */
+ul.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; /* Added margin for better spacing */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+ul.social-links li {
+  margin: 0 15px; /* Spacing between items */
+}
+
+ul.social-links li:not(:last-child)::after {
+  content: "|";
+  margin-left: 15px;
+  color: #ffffff; /* Separator color */
+  opacity: 0.6; /* Reduced opacity for a subtle look */
+}
+
+ul.social-links li a {
+  font-size: 16px; /* Slightly larger font size for links */
+  display: inline-block; /* Ensure consistent spacing */
+}
+
+/* Additional links or navigation */
+footer nav {
+  margin-top: 20px; /* Spacing between sections */
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 15px; /* Consistent spacing between items */
+  padding: 0;
+  margin: 0;
+}
+
+footer nav ul li {
+  margin: 0;
+}
+
+footer nav ul li a {
+  font-size: 14px; /* Adjusted font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 10px; /* Reduced padding for smaller screens */
+  }
+
+  ul.social-links li {
+    margin: 10px 15px; /* Adjusted spacing for smaller screens */
+  }
+
+  footer nav ul {
+    gap: 10px; /* Reduced gap for smaller screens */
+  }
+}

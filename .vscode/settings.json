@@ -1,0 +1,5 @@
+{
+    "editor.wordWrap": "on",
+    "eslint.enable": false,
+    "eslint.codeActionsOnSave.rules": null
+}

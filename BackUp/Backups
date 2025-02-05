@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LastStopIT - Managed IT services, cybersecurity solutions, and cloud computing for businesses of all sizes.">
+  <meta name="keywords" content="IT services, cybersecurity, cloud solutions, managed IT, IT support">
+  <meta name="author" content="LastStopIT">
+  <title>TechSupport - Managed IT Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>LastStopIT</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li> <!-- Added Blog Section -->
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Your Trusted IT Support Partner</h2>
+    <p>We provide reliable and scalable IT solutions for businesses of all sizes, ensuring operational efficiency and security.</p>
+    <button onclick="window.location.href='services.html'">Get Started</button> <!-- Added action for button -->
+  </section>
+
+  <!-- Services Section -->
+  
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-item">
+      <h3>Managed IT Services</h3>
+      <p>Proactive monitoring and management of your IT infrastructure to minimize downtime and improve business productivity.</p>
+      <ul>
+        <li>24/7 Network Monitoring</li>
+        <li>Incident Response and Recovery</li>
+        <li>IT Strategy Consulting</li>
+      </ul>
+    </div>
+    <div class="service-item">
+      <h3>Cybersecurity</h3>
+      <p>Protect your business from evolving cyber threats with our advanced security solutions, including threat detection and risk management.</p>
+      <ul>
+        <li>Firewall Protection</li>
+        <li>Data Encryption</li>
+        <li>Employee Security Training</li>
+      </ul>
+    </div>
+    <div class="service-item">
+      <h3>Cloud Solutions</h3>
+      <p>Scalable and secure cloud services tailored to your business needs, ensuring flexibility and efficiency in your IT operations.</p>
+      <ul>
+        <li>Cloud Migration</li>
+        <li>Data Backup and Disaster Recovery</li>
+        <li>Cloud Infrastructure Management</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a team of IT experts with years of experience dedicated to helping businesses of all sizes optimize their technology infrastructure and stay ahead in the competitive landscape. Our mission is to provide personalized IT solutions that align with your unique business goals and requirements.</p>
+    <br>
+    <h2>Our Core Values</h2>
+    <ul>
+      <li>Customer-Centricity: We prioritize your needs and satisfaction.</li>
+      <li>Innovation: We constantly adapt to the latest technology trends.</li>
+      <li>Security: We protect your data and systems with the highest standards.</li>
+    </ul>
+  </section>
+
+  <!-- Testimonials Section
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <blockquote>"LastStopIT helped us streamline our IT systems and reduce downtime significantly. Their team is always responsive and proactive in solving issues." – Jane D., CEO of ExampleCorp</blockquote>
+    </div>
+    <div class="testimonial">
+      <blockquote>"Thanks to their cybersecurity solutions, we now feel confident in the security of our business operations. They provide peace of mind." – John S., IT Manager at TechSolutions</blockquote>
+    </div>
+  </section> -->
+
+  <!-- Testimonials Section -->
+<!-- <section id="testimonials" class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-item">
+    <p>"LastStopIT has been a game-changer for our business. Their managed IT services keep our systems running smoothly, and their team is always responsive when we need support."</p>
+    <h3>Jane Doe</h3>
+    <p>CEO, Example Corp</p>
+  </div>
+  
+  <div class="testimonial-item">
+    <p>"The cybersecurity solutions provided by LastStopIT have significantly enhanced our data protection. We feel much more secure knowing they are monitoring our systems."</p>
+    <h3>John Smith</h3>
+    <p>CTO, Tech Innovators</p>
+  </div>
+
+  <div class="testimonial-item">
+    <p>"Thanks to LastStopIT, migrating to the cloud was seamless. We are now able to scale our infrastructure with ease, and their team was there every step of the way."</p>
+    <h3>Emily Clark</h3>
+    <p>IT Manager, Cloud Enterprises</p>
+  </div>
+</section> -->
+
+
+<!-- Testimonials Section
+<section id="testimonials" class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-item">
+      <p>"LastStopIT has been a game-changer for our business. Their managed IT services keep our systems running smoothly, and their team is always responsive when we need support."</p>
+      <h3>Jane Doe</h3>
+      <p>CEO, Example Corp</p>
+    </div>
+  
+    <div class="testimonial-item">
+      <p>"The cybersecurity solutions provided by LastStopIT have significantly enhanced our data protection. We feel much more secure knowing they are monitoring our systems."</p>
+      <h3>John Smith</h3>
+      <p>CTO, Tech Innovators</p>
+    </div>
+
+    <div class="testimonial-item">
+      <p>"Thanks to LastStopIT, migrating to the cloud was seamless. We are now able to scale our infrastructure with ease, and their team was there every step of the way."</p>
+      <h3>Emily Clark</h3>
+      <p>IT Manager, Cloud Enterprises</p>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-items-wrapper">
+      <div class="testimonial-item">
+        <p>"LastStopIT has been a game-changer for our business. Their managed IT services keep our systems running smoothly, and their team is always responsive when we need support."</p>
+        <h3>Jane Doe</h3>
+        <p>CEO, Example Corp</p>
+      </div>
+    
+      <div class="testimonial-item">
+        <p>"The cybersecurity solutions provided by LastStopIT have significantly enhanced our data protection. We feel much more secure knowing they are monitoring our systems."</p>
+        <h3>John Smith</h3>
+        <p>CTO, Tech Innovators</p>
+      </div>
+  
+      <div class="testimonial-item">
+        <p>"Thanks to LastStopIT, migrating to the cloud was seamless. We are now able to scale our infrastructure with ease, and their team was there every step of the way."</p>
+        <h3>Emily Clark</h3>
+        <p>IT Manager, Cloud Enterprises</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have any questions or need a consultation? We're here to help!</p>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 LastStopIT. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="#" rel="noopener noreferrer">Privacy Policy</a></li>
+        <li><a href="#" rel="noopener noreferrer">Terms of Service</a></li>
+        <li><a href="https://facebook.com/LastStopIT" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://twitter.com/LastStopIT" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        <li><a href="https://linkedin.com/company/laststopit" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul>
+      
+    </div>
+  </footer>
+  
+  <script src="testimonials.js"></script>
+</body>
+</html>
