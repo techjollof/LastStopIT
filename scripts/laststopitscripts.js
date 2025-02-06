@@ -210,6 +210,56 @@ function generateFooter() {
 
 
 
+// Search functionality
+function setupSearch() {
+  const searchInput = document.getElementById('search-input');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      const posts = document.querySelectorAll('.blog-post');
+
+      posts.forEach(post => {
+          const title = post.querySelector('.post-title').textContent.toLowerCase();
+          const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
+          if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+              post.style.display = 'block';
+          } else {
+              post.style.display = 'none';
+          }
+      });
+  });
+}
+
+// Pagination functionality
+function setupPagination() {
+  const paginationLinks = document.querySelectorAll('.pagination a');
+  if (!paginationLinks.length) return;
+
+  paginationLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+          paginationLinks.forEach(link => link.classList.remove('active'));
+          e.target.classList.add('active');
+          // Add logic to load the corresponding page content
+          console.log(`Loading page: ${e.target.textContent}`);
+      });
+  });
+}
+
+// Highlight featured posts
+function highlightFeaturedPosts() {
+  const featuredPosts = document.querySelectorAll('.blog-post.featured');
+  if (!featuredPosts.length) return;
+
+  featuredPosts.forEach(post => {
+      post.style.border = '2px solid #2a7bd6';
+  });
+}
+
+
+// Run the initialization when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initializeBlog);
 
 // Initialize everything when the window loads
 window.onload = function () {
@@ -224,4 +274,8 @@ window.onload = function () {
   
   // Initialize the header opacity on page load
   handleScroll();
+
+  setupSearch();
+  setupPagination();
+  highlightFeaturedPosts();
 };
