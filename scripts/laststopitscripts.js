@@ -168,7 +168,7 @@ const paths = {
   home: "/index.html",
   services: "/services.html",
   about: "/about.html",
-  // blog: "/blog/blog.html",
+  blog: "/blog/blog.html",
   contact: "/contact.html",
 };
 
@@ -206,6 +206,9 @@ function generateFooter() {
     console.error("Footer element not found.");
   }
 }
+
+
+
 
 
 // Initialize everything when the window loads
