@@ -210,6 +210,7 @@ function generateFooter() {
 
 
 
+
 // Search functionality
 function setupSearch() {
   const searchInput = document.getElementById('search-input');
@@ -258,8 +259,7 @@ function highlightFeaturedPosts() {
 }
 
 
-// Run the initialization when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', initializeBlog);
+
 
 // Initialize everything when the window loads
 window.onload = function () {
@@ -276,6 +276,6 @@ window.onload = function () {
   handleScroll();
 
   setupSearch();
-  setupPagination();
-  highlightFeaturedPosts();
+    setupPagination();
+    highlightFeaturedPosts();
 };
