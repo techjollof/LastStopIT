@@ -1,0 +1,110 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Server, Shield, Code, Database, Laptop, Wifi, Smartphone, HardDrive, Cloud, Network, MonitorSmartphone, Users } from 'lucide-react';
+
+const Services: React.FC = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const services = [
+    {
+      title: 'Cloud Solutions',
+      description: 'Secure and scalable cloud infrastructure with AWS, Azure, and Google Cloud expertise.',
+      icon: <Cloud className="h-8 w-8 text-accent-600" />,
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced threat protection, security audits, and compliance management.',
+      icon: <Shield className="h-8 w-8 text-accent-600" />,
+    },
+    {
+      title: 'Software Development',
+      description: 'Custom enterprise applications and digital transformation solutions.',
+      icon: <Code className="h-8 w-8 text-accent-600" />,
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Business intelligence, data visualization, and predictive analytics.',
+      icon: <Database className="h-8 w-8 text-accent-600" />,
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic technology planning and digital transformation roadmaps.',
+      icon: <Users className="h-8 w-8 text-accent-600" />,
+    },
+    {
+      title: 'Network Infrastructure',
+      description: 'Enterprise networking, VPN solutions, and network security.',
+      icon: <Network className="h-8 w-8 text-accent-600" />,
+    },
+    {
+      title: 'Digital Workplace',
+      description: 'Modern workplace solutions, collaboration tools, and productivity platforms.',
+      icon: <MonitorSmartphone className="h-8 w-8 text-accent-600" />,
+    },
+    {
+      title: 'Managed IT Services',
+      description: '24/7 monitoring, maintenance, and support for your IT infrastructure.',
+      icon: <HardDrive className="h-8 w-8 text-accent-600" />,
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
+
+  return (
+    <section id="services" className="section bg-gray-50">
+      <div className="container-custom">
+        <div className="section-title">
+          <h2 className="mb-3">Our Services</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Empowering businesses with cutting-edge IT solutions and expert services to drive digital transformation and growth.
+          </p>
+        </div>
+
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
+        >
+          {services.map((service, index) => (
+            <motion.div 
+              key={index}
+              variants={itemVariants}
+              className="card p-6 bg-white hover:border-l-4 hover:border-accent-500 group"
+            >
+              <div className="mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-3 group-hover:text-accent-600 transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-gray-600">{service.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
